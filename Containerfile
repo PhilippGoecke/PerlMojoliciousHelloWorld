@@ -9,7 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt update && DEBIAN_FRONTEND=noninteractive 
   && rm -rf /tmp/* /var/tmp/*
 
 RUN curl -L http://xrl.us/installperlnix | bash \
-  && cpanm --version \
+  && cpanm --version
 
 WORKDIR /tmp
 
