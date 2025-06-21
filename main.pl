@@ -2,7 +2,8 @@
 use Mojolicious::Lite -signatures;
 
 get '/' => sub ($c) {
-  $c->render(text => 'Hello World!');
+  my $name = $c->param('name') // 'World';
+  $c->render(text => "Hello $name!");
 };
 
 app->start;
